@@ -80,7 +80,7 @@ export default function Home() {
     setMessages([
       {
         role: "assistant",
-        content: "안녕하세요? 저는 민준이라고 합니다. 무엇을 도와드릴까요?",
+        content: "안녕하세요? 저는 당신의 인공지능 비서 민준이라고 합니다. 무엇을 도와드릴까요?",
       },
     ]);
   };
@@ -98,8 +98,8 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>A Simple Chatbot</title>
-        <meta name="description" content="A Simple Chatbot" />
+        <title>A Personal Assistant</title>
+        <meta name="description" content="A Personal Assistant" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
@@ -109,9 +109,9 @@ export default function Home() {
           <div className="font-bold text-3xl flex text-center">
             <a
               className="ml-2 hover:opacity-50"
-              href="https://code-scaffold.vercel.app"
+              href="/"
             >
-              A Simple Chatbot
+              A Personal Assistant
             </a>
           </div>
         </div>
