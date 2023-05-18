@@ -3,14 +3,14 @@ import { ChatInput } from "./ChatInput";
 import { ChatLoader } from "./ChatLoader";
 import { ChatBubble } from "./ChatBubble";
 
-export const Chat = ({ messages, loading, onSendMessage }) => {
+export const Chat = ({ messages, loading, onSendMessage, onClear }) => {
   return (
     <>
       <div className="flex flex-col rounded-lg px-2 sm:p-4 sm:border border-neutral-300">
         {/* messages 의 내용을 ChatBubble 컴포넌트를 통해 출력 */}
         {messages.map((message, index) => (
           <div key={index} className="my-1 sm:my-1.5">
-            <ChatBubble message={message} />
+            <ChatBubble message={message} onClear={onClear} last={(index !== 0) && (index === messages.length-1)} />
           </div>
         ))}
 

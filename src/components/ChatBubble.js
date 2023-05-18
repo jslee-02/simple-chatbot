@@ -1,4 +1,6 @@
-export const ChatBubble = ({ message }) => {
+import { IconTrash } from "@tabler/icons-react";
+
+export const ChatBubble = ({ message, onClear, last }) => {
   return (
     <div
       className={`flex flex-col ${
@@ -16,6 +18,13 @@ export const ChatBubble = ({ message }) => {
       >
         {message.content}
       </div>
+      {(last && message.role === "assistant") && (
+        <div className="mt-2">
+          <button onClick={() => onClear()}>
+            <IconTrash className="h-8 w-16 hover:cursor-pointer rounded-full p-1 bg-red-500 text-white hover:opacity-80" />
+          </button>
+        </div>
+      )}
     </div>
   );
 };
